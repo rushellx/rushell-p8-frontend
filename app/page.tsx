@@ -1,9 +1,6 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
+import { CONFIG } from "@/lib/config";
 
 export default function Home() {
-  return (
-    <>
-      This is the default landing page. Please customize this using ShadCN Components than can be found at https://ui.shadcn.com/docs/components
-    </>
-  );
+  redirect(CONFIG.ROUTES.LOGIN);
 }

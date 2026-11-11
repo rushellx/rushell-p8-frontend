@@ -1,17 +1,15 @@
-import './globals.css'
-import Navbar from '@/components/navbar'
+import "./globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-gray-100 min-h-screen">
-        <Navbar />
-        <main className="p-8">{children}</main>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
       </body>
     </html>
-  )
+  );
 }
